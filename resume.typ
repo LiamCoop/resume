@@ -67,13 +67,12 @@
 
 #v(0.2em)
 
-- Leading the migration of the province-wide post-secondary application service from IdentityServer4/.NET MVC with React to Next.js, enhancing performance, accessibility, and developer productivity
-- Designed and implemented Go services with MSSQL, NATS messaging, and MeiliSearch capabilities, delivering backend APIs, data processing, and search functionality for client applications
-- Developed extensive frontend features and maintained component library using React, TypeScript, TailwindCSS, Storybook; reduced technical debt and implemented responsive, accessible interfaces from Figma designs
-- Led cross-functional projects, serving as the primary engineering point of contact with product, design, and leadership
-- Conducted technical interviews and evaluated candidate assessments as part of the engineering hiring process, contributing to team growth and quality standards
-- Mentored developers on system design, algorithms, language patterns, and code composition techniques, reducing technical blockers and improving team productivity
-- Integrated the BC Provincial government issued digital ID into an OAuth2 authentication broker to streamline and improve the user authentication flow
+- Leading the migration of a post-secondary application service from IdentityServer4/.NET MVC with React to Next.js, enhancing performance, accessibility, and developer productivity
+- Designed and developed event-driven services for processing applications using Go, NATS JetStream, and MSSQL
+- Integrated BC Services Card digital ID to streamline user signup and auth with secure, government verified credentials
+- Implemented a Meilisearch-based academic history feature that simplified data entry and improved user satisfaction
+- Led development of cross-functional projects, serving as the engineering point of contact with product, design, and leadership
+- Accelerated project delivery and quality by conducting technical interviews, hiring and mentoring 8 new developers
 
 #v(0.2em)
 
@@ -81,10 +80,10 @@
 
 #v(0.2em)
 
-- Designed and developed hardware for remotely operated vehicles, including electrical schematics and PCBs
+- Designed high voltage power distribution hardware for submersible remotely operated vehicles
 - Authored design documentation, technical references, testing plans, and standard operating procedures for ROV systems
-- Standardized a system for flashing microcontroller configurations, leading to reduced device misconfigurations by 10%, reduced waste of critical, long lead-time components, and derisking large orders and saving \~12 QA hours/month
-- Conducted manual QA and triaged control software issues in Azure Boards, found critical issues and improved release quality
+- Standardized a system for flashing microcontroller configurations, reduced device misconfigurations by 10%, reduced waste of critical components with long lead-times, derisking large orders and saving \~12 QA hours/month
+- Conducted manual QA and triaged issues in Azure Boards, identified critical issues and improved release quality
 
 #v(0.2em)
 
@@ -153,16 +152,20 @@
 
 #v(0.2em)
 
-#set par(spacing: 0.6em)
-*Languages:* TypeScript, JavaScript, Go, C\#, C++
+#grid(
+  columns: (1fr, 3fr),
+  gutter: 1em,
+  row-gutter: 0.6em,
 
-*Frontend:* Next.js, React, Redux, TanStack Query, TailwindCSS, Storybook, Jest, Vite/Webpack
+  [*Languages*], [TypeScript, JavaScript, Go, C\#, C++],
 
-*Backend & Infrastructure:* OAuth2, IdentityServer4, REST APIs, Kubernetes/k8s, Goose, Prisma
+  [*Frontend*], [Next.js, React, Redux, TanStack Query, TailwindCSS, Storybook, Jest, Vite/Webpack],
 
-*Databases & Search:* MSSQL, PostgreSQL, MeiliSearch
+  [*Backend & Infrastructure*], [OAuth2, IdentityServer4, REST APIs, Kubernetes/k8s, Goose, Prisma],
 
-*Other Tools:* Git, Docker, Figma, NATS, Azure Boards
+  [*Databases & Search*], [MSSQL, PostgreSQL, MeiliSearch],
 
-*Spoken Languages:* English (native), French (fluent)
-#set par(spacing: 0.6em)
+  [*Other Tools*], [Git, Docker, Figma, NATS, Azure Boards],
+
+  [*Spoken Languages*], [English (native), French (fluent)]
+)
