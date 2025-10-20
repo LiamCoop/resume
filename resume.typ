@@ -69,7 +69,7 @@
 
 - Leading the migration of a post-secondary application service from IdentityServer4/.NET MVC with React to Next.js, enhancing performance, accessibility, and developer productivity
 - Designed and developed event-driven services for processing applications using Go, NATS JetStream, and MSSQL
-- Integrated BC Services Card digital ID to streamline user signup and auth with secure, government verified credentials
+- Integrated the BC Services Card digital ID to streamline user signup and auth with secure, government verified credentials
 - Implemented a Meilisearch-based academic history feature that simplified data entry and improved user satisfaction
 - Led development of cross-functional projects, serving as the engineering point of contact with product, design, and leadership
 - Accelerated project delivery and quality by conducting technical interviews, hiring and mentoring 8 new developers
@@ -98,6 +98,25 @@
   columns: (1fr, auto),
   gutter: 1em,
   [
+    *Distrace: Distributed tracing backend for correlating OpenTelemetry spans into complete traces*
+
+    - Built a correlation engine that assembles out-of-order spans from multiple services using TraceID-based grouping and parent-child relationship resolution
+    - Implemented intelligent trace completion strategies with 30-second inactivity timeouts and 5-minute maximum age limits to balance completeness with memory management
+    - Designed event-driven architecture consuming OTLP protobuf messages from Kafka, processing spans through goroutines and channels with backpressure handling
+  ],
+  align(right + top)[
+    #text(fill: accent_color, weight: "bold")[
+      Go \
+      Kafka \
+      OpenTelemetry
+    ]
+  ]
+)
+
+#grid(
+  columns: (1fr, auto),
+  gutter: 1em,
+  [
     *TimeTracker: Easily and efficiently keep track of time spent working on different projects*
 
     - Track session time and notes for time spent on different projects/serving different clients
@@ -112,23 +131,25 @@
   ]
 )
 
-#grid(
-  columns: (1fr, auto),
-  gutter: 1em,
-  [
-    *Palette: A tool for updating, editing, and storing your tailwind colour palettes*
+//#grid(
+//  columns: (1fr, auto),
+//  gutter: 1em,
+//  [
+//    *Palette: A tool for updating, editing, and storing your tailwind colour palettes*
+//
+//    - Create or manage your existing TailwindCSS colour palettes for different projects
+//    - These can be edited using the GUI, or by text through a JSON editor with live validation
+//  ],
+//  align(right + top)[
+//    #text(fill: accent_color, weight: "bold")[
+//      TypeScript \
+//      Next.js \
+//      PostgreSQL
+//    ]
+//  ]
+//)
 
-    - Create or manage your existing TailwindCSS colour palettes for different projects
-    - These can be edited using the GUI, or by text through a JSON editor with live validation
-  ],
-  align(right + top)[
-    #text(fill: accent_color, weight: "bold")[
-      TypeScript \
-      Next.js \
-      PostgreSQL
-    ]
-  ]
-)
+
 
 #v(0.2em)
 
@@ -152,7 +173,7 @@
 
 #v(0.2em)
 
-#grid(
+ #grid(
   columns: (1fr, 3fr),
   gutter: 1em,
   row-gutter: 0.6em,
@@ -161,11 +182,14 @@
 
   [*Frontend*], [Next.js, React, Redux, TanStack Query, TailwindCSS, Storybook, Jest, Vite/Webpack],
 
-  [*Backend & Infrastructure*], [OAuth2, IdentityServer4, REST APIs, Kubernetes/k8s, Goose, Prisma],
+  [*Backend & Infrastructure*], [OAuth2, IdentityServer4, REST APIs, Kubernetes/k8s, Goose, Prisma, OpenTelemetry],
 
   [*Databases & Search*], [MSSQL, PostgreSQL, MeiliSearch],
 
-  [*Other Tools*], [Git, Docker, Figma, NATS, Azure Boards],
+  [*Messaging*], [Kafka, NATS JetStream],
+
+  [*Other Tools*], [Git, Docker, Figma, Azure Boards],
 
   [*Spoken Languages*], [English (native), French (fluent)]
 )
+
