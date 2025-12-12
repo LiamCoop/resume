@@ -67,12 +67,12 @@
 
 #v(0.2em)
 
-- Leading the migration of a post-secondary application service from IdentityServer4/.NET MVC with React to Next.js, enhancing performance, accessibility, and developer productivity
+- Migrated the migration of a post-secondary application service from IdentityServer4/.NET MVC with React to Next.js, enhancing performance, accessibility, and developer productivity
+- Architect system-wide design patterns and technical standards across frontend, backend, and infrastructure teams, establishing best practices for the broader engineering organization
+- Identified and resolved critical performance bottlenecks causing system failures under load, using k6 load testing and database optimizations to increase max supported concurrent users from 3 to 250
 - Designed and developed event-driven services for processing applications using Go, NATS JetStream, and MSSQL
 - Integrated the BC Services Card digital ID to streamline user signup and auth with secure, government verified credentials
-- Implemented a Meilisearch-based academic history feature that simplified data entry and improved user satisfaction
-- Led development of cross-functional projects, serving as the engineering point of contact with product, design, and leadership
-- Accelerated project delivery and quality by conducting technical interviews, hiring and mentoring 8 new developers
+- Led development of cross-functional projects, serving as the engineering point of contact with product, design, and leadership; accelerating delivery and quality by conducting technical interviews, hiring and mentoring 8 new developers
 
 #v(0.2em)
 
@@ -83,7 +83,7 @@
 - Designed high voltage power distribution hardware for submersible remotely operated vehicles
 - Authored design documentation, technical references, testing plans, and standard operating procedures for ROV systems
 - Standardized a system for flashing microcontroller configurations, reduced device misconfigurations by 10%, reduced waste of critical components with long lead-times, derisking large orders and saving \~12 QA hours/month
-- Conducted manual QA and triaged issues in Azure Boards, identified critical issues and improved release quality
+- Manual software QA and triaged issues in Azure Boards, identified critical issues and improved release quality
 
 #v(0.2em)
 
@@ -113,6 +113,7 @@
   ]
 )
 
+/*
 #grid(
   columns: (1fr, auto),
   gutter: 1em,
@@ -121,6 +122,25 @@
 
     - Track session time and notes for time spent on different projects/serving different clients
     - Review weekly summaries and add data into your billing software all at once
+  ],
+  align(right + top)[
+    #text(fill: accent_color, weight: "bold")[
+      TypeScript \
+      Next.js \
+      PostgreSQL
+    ]
+  ]
+)
+*/
+
+#grid(
+  columns: (1fr, auto),
+  gutter: 1em,
+  [
+    *Rules Engine: Custom rules evaluator, predefine your schema and evaluation criteria, then pass in your facts and get results*
+
+    - Uses a Common Expression Language (CEL) to process arbitrary user defined schemas, rules, and facts
+    - Supports custom schemas and validation rules.
   ],
   align(right + top)[
     #text(fill: accent_color, weight: "bold")[
@@ -188,7 +208,7 @@
 
   [*Messaging*], [Kafka, NATS JetStream],
 
-  [*Other Tools*], [Git, Docker, Figma, Azure Boards],
+  [*Other Tools*], [Git, Docker, k6, Figma, Azure Boards],
 
   [*Spoken Languages*], [English (native), French (fluent)]
 )
