@@ -67,12 +67,13 @@
 
 #v(0.2em)
 
-- Migrated the migration of a post-secondary application service from IdentityServer4/.NET MVC with React to Next.js, enhancing performance, accessibility, and developer productivity
-- Architect system-wide design patterns and technical standards across frontend, backend, and infrastructure teams, establishing best practices for the broader engineering organization
-- Identified and resolved critical performance bottlenecks causing system failures under load, using k6 load testing and database optimizations to increase max supported concurrent users from 3 to 250
-- Designed and developed event-driven services for processing applications using Go, NATS JetStream, and MSSQL
+- Improved maintainability, developer velocity and frontend performance metrics through the refactor and migration of a post secondary application web-app from ASP.NET to Next.js; validated complex logic with tap-compare and supported incremental rollout with the strangler fig pattern
+// - Refactored and migrated a post secondary application web-app from ASP.NET to Next.js to improve developer velocity, maintainability and frontend performance metrics; validated complex logic with tap-compare and supported incremental rollout with the strangler fig pattern
+- Optimized performance of critical backend services during high traffic periods, used k6 to identify critical bottlenecks and validate performance improvements leading to 9x throughput improvements, scaling critical service to handling over 2k RPS
+- Established best practices for the broader engineering team by defining architecture, design patterns and technical standards
+- Designed backend services for processing applications using Go, NATS, supporting peak volumes of 10k applications per day
+- Scaled engineering capacity through technical interviews, hiring, and mentoring 8 new developers over 2 years
 - Integrated the BC Services Card digital ID to streamline user signup and auth with secure, government verified credentials
-- Led development of cross-functional projects, serving as the engineering point of contact with product, design, and leadership; accelerating delivery and quality by conducting technical interviews, hiring and mentoring 8 new developers
 
 #v(0.2em)
 
@@ -80,10 +81,11 @@
 
 #v(0.2em)
 
-- Designed high voltage power distribution hardware for submersible remotely operated vehicles
-- Authored design documentation, technical references, testing plans, and standard operating procedures for ROV systems
-- Standardized a system for flashing microcontroller configurations, reduced device misconfigurations by 10%, reduced waste of critical components with long lead-times, derisking large orders and saving \~12 QA hours/month
-- Manual software QA and triaged issues in Azure Boards, identified critical issues and improved release quality
+- Developed high-voltage power distribution hardware for submersible robotics applications, including schematic capture, PCB layout, testing and validation, and in-house manufacturing support through production
+- Designed and standardized a microcontroller configuration system, reducing device misconfigurations by 10%, minimizing waste of long lead-time components, and saving ~12 QA hours per month while derisking large production orders
+- Authored comprehensive design docs, technical references, and SOPs to support ROV assembly, testing and deployment
+- Resolved multi-disciplinary issues during assembly/QA while collaborating with engineers, technicians, machinists and QA
+// - Performed software QA and defect triage in Azure Boards, identifying critical issues and improving overall release quality
 
 #v(0.2em)
 
@@ -98,11 +100,27 @@
   columns: (1fr, auto),
   gutter: 1em,
   [
-    *Distrace: Distributed tracing backend for correlating OpenTelemetry spans into complete traces*
+    *Rules Engine: evaluates complex user-defined schemas and rules*
+    - Designed a stateless, horizontally scalable rule engine evaluating dynamic user-devined schemas via Common Expression Language
+    - Achieved ~7k RPS per instance under sustained load (10-minute test, ~4M evaluations)
+    - Identified and analyzed saturation behavior at tail latencies (p95 ~2.8s under peak load)
+  ],
+  align(right + top)[
+    #text(fill: accent_color, weight: "bold")[
+      Go \
+      PostgreSQL \
+    ]
+  ]
+)
 
-    - Built a correlation engine that assembles out-of-order spans from multiple services using TraceID-based grouping and parent-child relationship resolution
-    - Implemented intelligent trace completion strategies with 30-second inactivity timeouts and 5-minute maximum age limits to balance completeness with memory management
-    - Designed event-driven architecture consuming OTLP protobuf messages from Kafka, processing spans through goroutines and channels with backpressure handling
+#grid(
+  columns: (1fr, auto),
+  gutter: 1em,
+  [
+    *Distrace: Distributed tracing backend for OpenTelemetry*
+
+    - Correlates out-of-order spans across services using TraceID grouping and parent–child resolution
+    - Implements bounded trace completion with inactivity and max-age limits (30s / 5m) to balance completeness with memory constraints
   ],
   align(right + top)[
     #text(fill: accent_color, weight: "bold")[
@@ -112,64 +130,6 @@
     ]
   ]
 )
-
-/*
-#grid(
-  columns: (1fr, auto),
-  gutter: 1em,
-  [
-    *TimeTracker: Easily and efficiently keep track of time spent working on different projects*
-
-    - Track session time and notes for time spent on different projects/serving different clients
-    - Review weekly summaries and add data into your billing software all at once
-  ],
-  align(right + top)[
-    #text(fill: accent_color, weight: "bold")[
-      TypeScript \
-      Next.js \
-      PostgreSQL
-    ]
-  ]
-)
-*/
-
-#grid(
-  columns: (1fr, auto),
-  gutter: 1em,
-  [
-    *Rules Engine: Custom rules evaluator, predefine your schema and evaluation criteria, then pass in your facts and get results*
-
-    - Uses a Common Expression Language (CEL) to process arbitrary user defined schemas, rules, and facts
-    - Supports custom schemas and validation rules.
-  ],
-  align(right + top)[
-    #text(fill: accent_color, weight: "bold")[
-      TypeScript \
-      Next.js \
-      PostgreSQL
-    ]
-  ]
-)
-
-//#grid(
-//  columns: (1fr, auto),
-//  gutter: 1em,
-//  [
-//    *Palette: A tool for updating, editing, and storing your tailwind colour palettes*
-//
-//    - Create or manage your existing TailwindCSS colour palettes for different projects
-//    - These can be edited using the GUI, or by text through a JSON editor with live validation
-//  ],
-//  align(right + top)[
-//    #text(fill: accent_color, weight: "bold")[
-//      TypeScript \
-//      Next.js \
-//      PostgreSQL
-//    ]
-//  ]
-//)
-
-
 
 #v(0.2em)
 
@@ -202,14 +162,13 @@
 
   [*Frontend*], [Next.js, React, Redux, TanStack Query, TailwindCSS, Storybook, Jest, Vite/Webpack],
 
-  [*Backend & Infrastructure*], [OAuth2, IdentityServer4, REST APIs, Kubernetes/k8s, Goose, Prisma, OpenTelemetry],
+  [*Backend & APIs*], [REST APIs, Prisma, Goose],
 
-  [*Databases & Search*], [MSSQL, PostgreSQL, MeiliSearch],
+  [*Databases & Messaging*], [MSSQL, PostgreSQL, Redis, Kafka, NATS],
 
-  [*Messaging*], [Kafka, NATS JetStream],
+  [*Infrastructure & DevOps*], [Kubernetes (k8s), Docker],
 
-  [*Other Tools*], [Git, Docker, k6, Figma, Azure Boards],
-
-  [*Spoken Languages*], [English (native), French (fluent)]
+  [*Tooling & Collaboration*], [Git, k6, MeiliSearch, Figma, Azure Boards],
+  // [*Spoken Languages*], [English (native), French (fluent)]
 )
 
