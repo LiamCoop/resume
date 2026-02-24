@@ -45,8 +45,8 @@
     align: (left, center, right),
 
     [
-      (250) 268-4578 \
-      liamcoop\@outlook.com
+      liamcoop\@outlook.com \
+      #link("https://liamcooper.ca")[liamcooper.ca]
     ],
 
     text(size: 18pt, weight: "bold", fill: accent_color, "Liam Cooper"),
@@ -68,12 +68,11 @@
 #v(0.2em)
 
 - Improved maintainability, developer velocity and frontend performance metrics through the refactor and migration of a post secondary application web-app from ASP.NET to Next.js; validated complex logic with tap-compare and supported incremental rollout with the strangler fig pattern
-// - Refactored and migrated a post secondary application web-app from ASP.NET to Next.js to improve developer velocity, maintainability and frontend performance metrics; validated complex logic with tap-compare and supported incremental rollout with the strangler fig pattern
 - Optimized performance of critical backend services during high traffic periods, used k6 to identify critical bottlenecks and validate performance improvements leading to 9x throughput improvements, scaling critical service to handling over 2k RPS
 - Established best practices for the broader engineering team by defining architecture, design patterns and technical standards
 - Designed backend services for processing applications using Go, NATS, supporting peak volumes of 10k applications per day
 - Scaled engineering capacity through technical interviews, hiring, and mentoring 8 new developers over 2 years
-- Integrated the BC Services Card digital ID to streamline user signup and auth with secure, government verified credentials
+- Streamlined user signup and authentication by integrating with the BC Services Card government verified digital ID
 
 #v(0.2em)
 
@@ -84,7 +83,7 @@
 - Developed high-voltage power distribution hardware for submersible robotics applications, including schematic capture, PCB layout, testing and validation, and in-house manufacturing support through production
 - Designed and standardized a microcontroller configuration system, reducing device misconfigurations by 10%, minimizing waste of long lead-time components, and saving ~12 QA hours per month while derisking large production orders
 - Authored comprehensive design docs, technical references, and SOPs to support ROV assembly, testing and deployment
-- Resolved multi-disciplinary issues during assembly/QA while collaborating with engineers, technicians, machinists and QA
+// - Resolved multi-disciplinary issues during assembly/QA while collaborating with engineers, technicians, machinists and QA
 // - Performed software QA and defect triage in Azure Boards, identifying critical issues and improving overall release quality
 
 #v(0.2em)
@@ -101,7 +100,7 @@
   gutter: 1em,
   [
     *Rules Engine: evaluates complex user-defined schemas and rules*
-    - Designed a stateless, horizontally scalable rule engine evaluating dynamic user-devined schemas via Common Expression Language
+    - Designed a stateless, horizontally scalable rule engine evaluating dynamic user-defined schemas via Common Expression Language
     - Achieved ~7k RPS per instance under sustained load (10-minute test, ~4M evaluations)
     - Identified and analyzed saturation behavior at tail latencies (p95 ~2.8s under peak load)
   ],
